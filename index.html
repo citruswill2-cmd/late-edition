@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LATE EDITION — first page for the business you already decided on</title>
+  <meta name="description" content="Chris builds first websites for people starting a business, and hangs other live sites on a newsprint rack. Aimed at modern young adults." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#EDE6D6",
+            cream: "#F7F1E4",
+            ink: "#12110F",
+            mute: "#6B675E",
+            rule: "#1C1B18",
+            line: "#4D8BFF",
+            heat: "#FF2B3A"
+          },
+          fontFamily: {
+            display: ["Anton", "Impact", "sans-serif"],
+            serif: ["Newsreader", "Georgia", "serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        repeating-linear-gradient(0deg, rgba(18,17,15,.035) 0 1px, transparent 1px 28px),
+        #EDE6D6;
+    }
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: .09;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .mast {
+      border-bottom: 4px double #12110F;
+      border-top: 2px solid #12110F;
+    }
+    .col-rule { box-shadow: inset 1px 0 0 #12110F; }
+    .live-dot { box-shadow: 0 0 0 1px rgba(77,139,255,.45), 0 0 10px rgba(77,139,255,.25); }
+    .heat-dot { box-shadow: 0 0 0 1px rgba(255,43,58,.5), 0 0 10px rgba(255,43,58,.25); }
+    .reveal { opacity: 0; }
+  </style>
+</head>
+<body class="bg-paper text-ink font-serif antialiased">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="grid h-8 w-8 place-items-center border-2 border-ink font-mono text-[10px] tracking-widest">LE</span>
+        <span class="font-display text-xl tracking-wide">LATE EDITION</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-sm sm:flex">
+        <a href="#doors" class="hover:text-heat">Editions</a>
+        <a href="#wall" class="hover:text-heat">The rack</a>
+        <a href="#start" class="text-line hover:text-ink">File a brief</a>
+      </nav>
+      <a href="#start" class="border-2 border-heat bg-heat px-3 py-1 text-xs font-medium tracking-wide text-cream sm:hidden">Brief</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="mx-auto max-w-6xl px-5 pb-12 pt-8 sm:pt-12">
+      <div class="mast flex flex-wrap items-end justify-between gap-3 py-3">
+        <p class="reveal font-mono text-[11px] uppercase tracking-[0.28em] text-mute">Vol. 01 · Chris · first pages · live rack</p>
+        <p class="reveal font-mono text-[11px] uppercase tracking-[0.22em] text-mute">Sunday city · no CMS · files you own</p>
+      </div>
+      <h1 class="reveal mt-6 max-w-5xl font-display text-[16vw] leading-[0.82] tracking-tight sm:text-7xl md:text-8xl">
+        THE DECISION<br />
+        IS DONE.<br />
+        <span class="text-heat">THE PAGE IS</span><br />
+        THE NEXT LINE.
+      </h1>
+      <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-mute">
+        For modern young adults who said yes to a business and do not know how to put a site up.
+        For sites that are already live and still quiet. One HTML file. One rack that points at the other rooms.
+      </p>
+      <div class="reveal mt-8 flex flex-wrap gap-3">
+        <a href="#start" class="border-2 border-heat bg-heat px-5 py-3 text-sm font-medium tracking-wide text-cream">File the paragraph</a>
+        <a href="#wall" class="border-2 border-ink px-5 py-3 text-sm">Read who is already up</a>
+      </div>
+    </section>
+
+    <section id="doors" class="mx-auto max-w-6xl px-5 pb-16">
+      <div class="grid gap-0 border-2 border-ink md:grid-cols-2">
+        <article class="reveal bg-cream p-6 sm:p-8">
+          <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-line">Edition A</p>
+          <h2 class="mt-3 font-display text-4xl tracking-tight">FIRST PAGE</h2>
+          <p class="mt-4 leading-relaxed text-mute">
+            You want a business. You do not want a login wall, a $12k deck, or a builder that owns your copy.
+            You get one page that loads in about half a second, lives on Vercel, and the files are yours.
+          </p>
+          <ul class="mt-6 space-y-2 font-mono text-xs">
+            <li>— one paragraph is enough to start</li>
+            <li>— Tailwind, light motion, no build step</li>
+            <li>— written for people who just decided</li>
+          </ul>
+        </article>
+        <article class="reveal border-t-2 border-ink bg-cream p-6 sm:p-8 md:border-l-2 md:border-t-0">
+          <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-heat">Edition B</p>
+          <h2 class="mt-3 font-display text-4xl tracking-tight">THE RACK</h2>
+          <p class="mt-4 leading-relaxed text-mute">
+            Other sites Chris has already put up hang here under one masthead.
+            Blue mark means the URL is live. Red means studio heat.
+            Gray means the domain is still pointing at the wrong room — or nowhere.
+          </p>
+          <ul class="mt-6 space-y-2 font-mono text-xs">
+            <li>— iris0nyx.com is the artist cue</li>
+            <li>— no ads, no shop, no CMS on this page</li>
+            <li>— open column if your site should be on the rack</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 pb-16">
+      <p class="reveal font-mono text-[11px] uppercase tracking-[0.22em] text-mute">How the paper runs</p>
+      <div class="mt-6 grid gap-6 sm:grid-cols-3">
+        <div class="reveal border-t-2 border-ink pt-4">
+          <p class="font-mono text-xs text-line">01</p>
+          <h3 class="mt-2 font-display text-3xl">SAY IT</h3>
+          <p class="mt-2 text-sm leading-relaxed text-mute">One paragraph. What it is, who it is for, what “done” looks like. Mail opens with that text already in it.</p>
+        </div>
+        <div class="reveal border-t-2 border-ink pt-4">
+          <p class="font-mono text-xs text-mute">02</p>
+          <h3 class="mt-2 font-display text-3xl">OWN THE FILE</h3>
+          <p class="mt-2 text-sm leading-relaxed text-mute">You get HTML you can drop on Vercel. No account lock-in. Edit the copy yourself if you want.</p>
+        </div>
+        <div class="reveal border-t-2 border-heat pt-4">
+          <p class="font-mono text-xs text-heat">03</p>
+          <h3 class="mt-2 font-display text-3xl">HANG IT</h3>
+          <p class="mt-2 text-sm leading-relaxed text-mute">Live URL goes on the rack. Quiet sites get a column. New businesses get a first page that can take a name.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="wall" class="mx-auto max-w-6xl px-5 pb-16">
+      <div class="mast flex flex-wrap items-end justify-between gap-4 py-4">
+        <div>
+          <p class="reveal font-mono text-[11px] uppercase tracking-[0.22em] text-line">Classifieds</p>
+          <h2 class="reveal mt-1 font-display text-5xl tracking-tight sm:text-6xl">THE RACK</h2>
+        </div>
+        <p class="reveal max-w-sm text-sm text-mute">Blue is public. Red is studio. Gray is not public yet — Laughline 404s, Sameweek still serves CAST.</p>
+      </div>
+
+      <div class="mt-8 grid gap-px border-2 border-ink bg-ink sm:grid-cols-2 lg:grid-cols-3">
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://iris0nyx.com" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-line live-dot"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">IRIS ONYX</h3>
+          <p class="mt-1 font-mono text-xs text-line">iris0nyx.com · live</p>
+          <p class="mt-3 text-sm text-mute">Goth pop from Utah. Softest knife. The cue when the brief is an artist.</p>
+        </a>
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://dnc-computerz.vercel.app" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-line live-dot"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">DNC COMPUTERZ</h3>
+          <p class="mt-1 font-mono text-xs text-line">dnc-computerz.vercel.app · live</p>
+          <p class="mt-3 text-sm text-mute">Dee’s lot. Items on the table. A first page that sells without a cart.</p>
+        </a>
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://sameweekhq.vercel.app" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-heat heat-dot"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">REDLINE</h3>
+          <p class="mt-1 font-mono text-xs text-heat">sameweekhq.vercel.app · studio</p>
+          <p class="mt-3 text-sm text-mute">The shop that writes these drafts. That domain is currently serving REDLINE.</p>
+        </a>
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://daytape.vercel.app" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-line live-dot"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">DAYTAPE</h3>
+          <p class="mt-1 font-mono text-xs text-line">daytape.vercel.app · live</p>
+          <p class="mt-3 text-sm text-mute">Podcast and vlog first-draft. A tape you can actually open.</p>
+        </a>
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://github.com/citruswill2-cmd/sameweek" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-mute"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">SAMEWEEK</h3>
+          <p class="mt-1 font-mono text-xs text-mute">github · sameweek.vercel.app still serves CAST</p>
+          <p class="mt-3 text-sm text-mute">Needs its own live URL. Until then it stays gray on the rack.</p>
+        </a>
+        <a class="reveal group bg-cream p-5 hover:bg-paper" href="https://github.com/citruswill2-cmd/laughline" target="_blank" rel="noreferrer">
+          <span class="inline-block h-2 w-2 rounded-full bg-mute"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">LAUGHLINE</h3>
+          <p class="mt-1 font-mono text-xs text-mute">github · laughline.vercel.app is 404</p>
+          <p class="mt-3 text-sm text-mute">Comedy first-draft waiting on a public Vercel project.</p>
+        </a>
+        <a class="reveal group bg-paper p-5 sm:col-span-2 lg:col-span-3" href="#start">
+          <span class="inline-block h-2 w-2 rounded-full bg-heat heat-dot"></span>
+          <h3 class="mt-4 font-display text-2xl tracking-tight">OPEN COLUMN</h3>
+          <p class="mt-1 font-mono text-xs text-heat">your url · not hung yet</p>
+          <p class="mt-3 max-w-xl text-sm text-mute">If the site is live and quiet, or the business exists only as a decision, this is the empty frame. File the paragraph.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="start" class="mx-auto max-w-6xl px-5 pb-24">
+      <div class="reveal border-2 border-heat bg-cream p-6 sm:p-10">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-heat">City desk</p>
+        <h2 class="mt-3 font-display text-4xl tracking-tight sm:text-5xl">FILE A BRIEF</h2>
+        <p class="mt-4 max-w-xl text-mute">One field. No form product. This opens mail to Chris with your paragraph already written.</p>
+        <form id="brief" class="mt-8 space-y-4">
+          <label class="block font-mono text-[11px] uppercase tracking-[0.2em] text-mute" for="para">The paragraph</label>
+          <textarea id="para" name="para" rows="6" required placeholder="I decided to start ______. It is for ______. When someone lands they should ______." class="w-full resize-y border-2 border-ink bg-paper px-4 py-3 text-sm outline-none ring-line placeholder:text-mute/60 focus:border-line focus:ring-1"></textarea>
+          <button type="submit" class="border-2 border-heat bg-heat px-5 py-3 text-sm font-medium tracking-wide text-cream">Open mail to Chris</button>
+        </form>
+        <p class="mt-4 font-mono text-xs text-mute">citruswill2@gmail.com · subject: LATE EDITION brief</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t-4 border-double border-ink">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-8 text-xs text-mute">
+      <p>LATE EDITION · Chris · files you own</p>
+      <p class="font-mono">paper #EDE6D6 · line #4D8BFF · heat #FF2B3A</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script>
+    if (window.anime) {
+      anime({
+        targets: ".reveal",
+        opacity: [0, 1],
+        translateY: [12, 0],
+        delay: anime.stagger(60),
+        duration: 380,
+        easing: "easeOutQuad"
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach(function (el) { el.style.opacity = 1; });
+    }
+    document.getElementById("brief").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var text = document.getElementById("para").value.trim();
+      var body = "LATE EDITION brief%0D%0A%0D%0A" + encodeURIComponent(text);
+      window.location.href = "mailto:citruswill2@gmail.com?subject=" + encodeURIComponent("LATE EDITION brief") + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
